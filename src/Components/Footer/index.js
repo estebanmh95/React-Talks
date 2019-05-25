@@ -64,17 +64,17 @@ const Footer =  () => {
           <h4>Follow Us</h4>
           <ul className="social-icons">
             <li className="social-icons-facebook">
-              <a href="http://www.facebook.com/" target="_blank" title="Facebook">
+              <a href="http://www.facebook.com/" title="Facebook">
                 <i className="fa fa-facebook"></i>
               </a>
             </li>
             <li className="social-icons-twitter">
-              <a href="http://www.twitter.com/" target="_blank" title="Twitter">
+              <a href="http://www.twitter.com/" title="Twitter">
                 <i className="fa fa-twitter"></i>
               </a>
             </li>
             <li className="social-icons-linkedin">
-              <a href="http://www.linkedin.com/" target="_blank" title="Linkedin">
+              <a href="http://www.linkedin.com/" title="Linkedin">
                 <i className="fa fa-linkedin"></i>
               </a>
             </li>

@@ -20,33 +20,33 @@ const SideBar = () => {
                 <h4 className="heading-primary">Categories</h4>
                 <ul className="nav nav-list mb-xlg">
                   <li>
-                    <a href="#">Design (2)</a>
+                    <a href="/">Design (2)</a>
                   </li>
                   <li className="active">
-                    <a href="#">Photos (4)</a>
+                    <a href="/">Photos (4)</a>
                     <ul>
                       <li>
-                        <a href="#">Animals</a>
+                        <a href="/">Animals</a>
                       </li>
                       <li className="active">
-                        <a href="#">Business</a>
+                        <a href="/">Business</a>
                       </li>
                       <li>
-                        <a href="#">Sports</a>
+                        <a href="/">Sports</a>
                       </li>
                       <li>
-                        <a href="#">People</a>
+                        <a href="/">People</a>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="#">Videos (3)</a>
+                    <a href="/">Videos (3)</a>
                   </li>
                   <li>
-                    <a href="#">Lifestyle (2)</a>
+                    <a href="/">Lifestyle (2)</a>
                   </li>
                   <li>
-                    <a href="#">Technology (1)</a>
+                    <a href="/">Technology (1)</a>
                   </li>
                 </ul>
 

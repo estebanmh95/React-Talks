@@ -1,5 +1,5 @@
 import React  from 'react'
-
+import { Link } from "react-router-dom";
 class Post extends React.PureComponent{
   state = {
     value: true,
@@ -9,6 +9,7 @@ handler = () => {
     this.setState(
       (prevState) => ({value: !prevState.value})
       )
+
 }
   render (){
     if (this.props.img){
@@ -16,7 +17,7 @@ handler = () => {
         <div>
           <div>
               {this.state.value  ?
-              <button type="button" class="btn-primary" onClick={this.handler}>Ocultar</button> : <button type="button" class="btn-primary" onClick={this.handler}>Mostrar</button>}
+              <button type="button" className="btn-primary" onClick={this.handler}>Ocultar</button> : <button type="button" className="btn-primary" onClick={this.handler}>Mostrar</button>}
            </div>
             <div>
               {this.state.value ?
@@ -24,7 +25,10 @@ handler = () => {
                         <a href="blog-post.html" className="btn btn-xs btn-primary pull-right">Read more...</a>
                         <div className="post-image single">
                               <div className="img-thumbnail">
-                                <img className="img-thumbnail" src={this.props.img} alt=""/>
+
+                                <Link to={`/talk/${this.props.id}`}>
+                                 <img className="img-thumbnail" src={this.props.img} alt=""/>
+                                </Link>
                               </div>
                         </div>
 
@@ -36,27 +40,32 @@ handler = () => {
                         <div className="post-content">
 
                           <h2>
-                            <a href="blog-post.html">{this.props.title}</a>
+                            <Link to={`/talk/${this.props.id}`}>
+                                {this.props.title}
+                            </Link>
                           </h2>
                           <p>{this.props.content}</p>
 
                           <div className="post-meta">
                             <span>
                               <i className="fa fa-user"></i> By
-                              <a href="#">{this.props.by}</a>
+                              <a href="/">{this.props.by}</a>
                             </span>
                             <span>
                               <i className="fa fa-tag"></i>
-                              {this.props.tags.map(value =>
-                                  <a href="#">{`${value}   `}</a>
+                              {this.props.tags.map((value, idx) =>
+                                  <a key = {idx} href="/">{`${value}   `}</a>
                                 )}
 
                             </span>
                             <span>
                               <i className="fa fa-comments"></i>
-                              <a href="#">12 Comments</a>
+                              <a href="/">12 Comments</a>
                             </span>
-                            <a href="blog-post.html" className="btn btn-xs btn-primary pull-right">Read more...</a>
+                            <Link to={`/talk/${this.props.id}`}  className="btn btn-xs btn-primary pull-right">
+                              Read more...
+                            </Link>
+
                         </div>
                         </div>
                       </article>: null}
@@ -64,7 +73,7 @@ handler = () => {
         </div>
       )
     }
-
+    /*
     else if (this.props.vid){
       return(
         <article className="post post-large">
@@ -81,23 +90,25 @@ handler = () => {
                     <div className="post-content">
 
                       <h2>
-                        <a href="blog-post.html">{this.props.title}</a>
+                      <Link to={`/talk/${this.props.id}`}>
+                          {this.props.title}
+                       </Link>
                       </h2>
                       <p>{this.props.content}</p>
 
                       <div className="post-meta">
                         <span>
                           <i className="fa fa-user"></i> By
-                          <a href="#">{this.props.by}</a>
+                          <a href="/">{this.props.by}</a>
                         </span>
                         <span>
                           <i className="fa fa-tag"></i>
-                          <a href="#">Duis</a>,
-                          <a href="#">News</a>
+                          <a href="/">Duis</a>,
+                          <a href="/">News</a>
                         </span>
                         <span>
                           <i className="fa fa-comments"></i>
-                          <a href="#">12 Comments</a>
+                          <a href="/">12 Comments</a>
                         </span>
                         <a href="blog-post.html" className="btn btn-xs btn-primary pull-right">Read more...</a>
                       </div>
@@ -105,7 +116,8 @@ handler = () => {
                     </div>
                   </article>
       )
-     }
+     }*/
+     /*
      else if (this.props.sound){
        return(
           <article className="post post-large">
@@ -132,33 +144,33 @@ handler = () => {
             <div className="post-meta">
               <span>
                 <i className="fa fa-user"></i> By
-                <a href="#">John Doe</a>
+                <a href="/">John Doe</a>
               </span>
               <span>
                 <i className="fa fa-tag"></i>
-                <a href="#">Duis</a>,
-                <a href="#">News</a>
+                <a href="/">Duis</a>,
+                <a href="/">News</a>
               </span>
               <span>
                 <i className="fa fa-comments"></i>
-                <a href="#">12 Comments</a>
+                <a href="/">12 Comments</a>
               </span>
               <a href="blog-post.html" className="btn btn-xs btn-primary pull-right">Read more...</a>
             </div>
 
           </div>
     </article>
-        ) }
+        ) }*/
      else{
        return(
-        <article class="post post-large">
+        <article className="post post-large">
 
-        <div class="post-date">
-          <span class="day">{this.props.day}</span>
-          <span class="month">{this.props.month}</span>
+        <div className="post-date">
+          <span className="day">{this.props.day}</span>
+          <span className="month">{this.props.month}</span>
         </div>
 
-        <div class="post-content">
+        <div className="post-content">
 
           <blockquote>
             {this.props.content}
@@ -167,21 +179,21 @@ handler = () => {
             </small>
           </blockquote>
 
-          <div class="post-meta">
+          <div className="post-meta">
             <span>
-              <i class="fa fa-user"></i> By
-              <a href="#">{this.props.by}</a>
+              <i className="fa fa-user"></i> By
+              <a href="/">{this.props.by}</a>
             </span>
             <span>
-              <i class="fa fa-tag"></i>
-              <a href="#">Duis</a>,
-              <a href="#">News</a>
+              <i className="fa fa-tag"></i>
+              <a href="/">Duis</a>,
+              <a href="/">News</a>
             </span>
             <span>
-              <i class="fa fa-comments"></i>
-              <a href="#">12 Comments</a>
+              <i className="fa fa-comments"></i>
+              <a href="/">12 Comments</a>
             </span>
-            <a href="blog-post.html" class="btn btn-xs btn-primary pull-right">Read more...</a>
+            <a href="blog-post.html" className="btn btn-xs btn-primary pull-right">Read more...</a>
           </div>
 
         </div>

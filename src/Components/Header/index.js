@@ -9,6 +9,7 @@ const Header = () => (
               <div className="header-logo">
                 <a href="index.html">
                   <img alt="Porto" width="111" height="54" data-sticky-width="82" data-sticky-height="40" data-sticky-top="33" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png"/>
+
                 </a>
               </div>
             </div>
@@ -50,17 +51,17 @@ const Header = () => (
                   </button>
                   <ul className="header-social-icons social-icons hidden-xs">
                     <li className="social-icons-facebook">
-                      <a href="http://www.facebook.com/" target="_blank" title="Facebook">
+                      <a href="http://www.facebook.com/" title="Facebook">
                         <i className="fa fa-facebook"></i>
                       </a>
                     </li>
                     <li className="social-icons-twitter">
-                      <a href="http://www.twitter.com/" target="_blank" title="Twitter">
+                      <a href="http://www.twitter.com/" title="Twitter">
                         <i className="fa fa-twitter"></i>
                       </a>
                     </li>
                     <li className="social-icons-linkedin">
-                      <a href="http://www.linkedin.com/" target="_blank" title="Linkedin">
+                      <a href="http://www.linkedin.com/" title="Linkedin">
                         <i className="fa fa-linkedin"></i>
                       </a>
                     </li>
